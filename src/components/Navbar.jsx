@@ -42,7 +42,7 @@ const Navbar = () => {
               to="/hotels"
               className={`text-base hover:text-[#605DEC] transition-all duration-200 ${loactionPath("/hotels") && "text-[#605DEC]"}`}
             >
-              <li>Hotels</li>
+              <li>Places</li>
             </Link>
             <Link
               to="/packages"

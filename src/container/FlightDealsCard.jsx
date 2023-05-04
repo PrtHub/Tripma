@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 
 const FlightDealsCard = ({ image, title, name, price, des }) => {
@@ -7,7 +8,7 @@ const FlightDealsCard = ({ image, title, name, price, des }) => {
         <div className="w-full h-[397px]">
           <img
             src={image}
-            alt="shanghai"
+            alt="images"
             className="w-full h-full object-cover rounded-t"
           />
         </div>

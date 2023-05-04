@@ -49,7 +49,7 @@ const FlightDeals = () => {
              <img src={sunrise} alt="" className="w-full h-full object-cover rounded-t hidden md:block" />
              <img src={msunrise} alt="" className="w-full h-full object-cover rounded-t block md:hidden" />
            </div>
-           <div className="w-full h-full flex flex-col justify-center items-start gap-1 px-4 py-2">
+           <div className="w-full h-full flex flex-col justify-center items-start gap-1 px-4 py-3">
           <div className="flex flex-row items-center justify-between w-full">
             <h1 className="text-[#6E7491] text-base font-medium capitalize">
             Tsavo East National Park, <span className="text-[#605DEC]">Kenya</span>

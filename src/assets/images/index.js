@@ -27,9 +27,15 @@ import yirandingAi from './yirandingAi.png'
 import WorldMap from './WorldMap.png'
 import hero from './hero.png'
 import shangai from './shangai.png'
+import maldivs from './maldivs.png'
+import mongolia from './mongolia.png'
+import morocco from './morocco.png'
 
 export {
     hero,
+    morocco,
+    maldivs,
+    mongolia,
     tower,
     yang,
     waterfall,

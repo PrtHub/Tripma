@@ -37,9 +37,6 @@ const Places = () => {
             desc="Traditional Mongolian yurts consists of an angled latticework of wood or bamboo for walls, ribs, and a wheel."
           />
         </div>
-        <Link to='/hotels' className="flex items-center justify-center mt-10">
-           <button className="bg-[#605DEC] text-[#FAFAFA] px-5 py-3 outline-none border-none rounded">Explore more stays</button>
-        </Link>
       </div>
     </>
   );

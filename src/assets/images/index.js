@@ -19,10 +19,10 @@ import msunrise from './msunrise.png'
 import sydney from './sydney.png'
 import tower from './tower.png'
 import waterfall from './waterfall.png'
-import yang from './yang-deng.png'
-import yang2 from './yang-deng2.png'
+import Yifei from './Yifei.png'
+import Anthony from './Anthony.png'
 import yang3 from './yang-deng3.png'
-import yang4 from './yang-deng4.png'
+import kaori from './kaori.png'
 import yirandingAi from './yirandingAi.png'
 import WorldMap from './WorldMap.png'
 import hero from './hero.png'
@@ -37,10 +37,10 @@ export {
     maldivs,
     mongolia,
     tower,
-    yang,
+    Yifei,
     waterfall,
-    yang2,
-    yang4,
+    Anthony,
+    kaori,
     yang3,
     shangai,
     yirandingAi,

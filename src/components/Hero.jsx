@@ -4,11 +4,11 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Hero = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
     {

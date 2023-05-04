@@ -1,12 +1,12 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Hero from "./Hero";
-import Signin from "./Signin";
+import FlightDeals from "./FlightDeals";
 
 
 export {
     Navbar,
     Footer,
     Hero,
-    Signin
+    FlightDeals
 }

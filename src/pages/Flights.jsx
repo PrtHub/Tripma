@@ -1,4 +1,4 @@
-import { Hero } from "../components"
+import { FlightDeals, Hero } from "../components"
 
 
 const Flights = () => {
@@ -7,7 +7,9 @@ const Flights = () => {
     <div className="mt-[70px]">
      <Hero/>
     </div>
-
+    <div className="mt-[40px]">
+      <FlightDeals/>
+    </div>
     </>
   )
 }

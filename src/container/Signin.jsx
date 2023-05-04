@@ -76,7 +76,7 @@ const Signin = ({signin, setSignin}) => {
           className="w-full flex gap-2 items-center justify-center border-[1px] border-[#605DEC] rounded p-3"
           onClick={() => setSignin(false)}
         >
-          <FcGoogle className="w-[14px] h-[14px]" />
+          <FcGoogle className="w-[18px] h-[18px]" />
           <p className="text-[#605CDE] text-[16px] leading-6">
             Continue with Google
           </p>

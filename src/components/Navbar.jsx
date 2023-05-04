@@ -3,7 +3,7 @@ import { tripma } from "../assets/logo";
 import { MdOutlineClose } from 'react-icons/md'
 import { HiOutlineMenu } from 'react-icons/hi'
 import { useState } from "react";
-import Signin from "./Signin";
+import { Signin } from "../container";
 
 const Navbar = () => {
   const location = useLocation();

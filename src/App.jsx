@@ -8,7 +8,7 @@ import { Flights, Hotels, Packages } from './pages'
 const App = () => {
   return (
     <>
-    <div className='font-Nunito'>
+    <div className='font-Nunito overflow-hidden max-w-[1440px] mx-auto'>
        <Navbar/>
        <Routes>
         <Route path='/' element={<Flights/>}/>

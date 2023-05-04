@@ -4,6 +4,7 @@ import departure from './departure.png'
 import arrival from './arrival.png'
 import person from './personSolid.png'
 import calendar from './calendar.png'
+import right from './arrowRight.png'
 
 
 export {
@@ -12,5 +13,6 @@ export {
     departure,
     arrival,
     person,
-    calendar
+    calendar,
+    right
 }

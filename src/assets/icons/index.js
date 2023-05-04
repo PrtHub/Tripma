@@ -7,9 +7,16 @@ import calendar from './calendar.png'
 import right from './arrowRight.png'
 import Star from './Star.png'
 import Starblank from './Starblank.png'
+import facebook from './facebook.png'
+import instagram from './instagram.png'
+import twitter from './twitter.png'
+import appStore from './appStore.png'
+import googlePlay from './googlePlay.png'
 
 
 export {
+    appStore,
+    googlePlay,
     menu,
     close,
     departure,
@@ -18,5 +25,8 @@ export {
     calendar,
     right,
     Star,
-    Starblank
+    Starblank,
+    facebook,
+    instagram,
+    twitter
 }

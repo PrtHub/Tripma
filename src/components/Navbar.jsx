@@ -3,10 +3,12 @@ import { tripma } from "../assets/logo";
 import { MdOutlineClose } from 'react-icons/md'
 import { HiOutlineMenu } from 'react-icons/hi'
 import { useState } from "react";
+import Signin from "./Signin";
 
 const Navbar = () => {
   const location = useLocation();
   const[toggle, setToggle] = useState(false);
+  const [signin, setSignin] = useState(false);
 
   const loactionPath = (route) => {
     if(route === location.pathname) {
@@ -49,13 +51,23 @@ const Navbar = () => {
               <li>Packages</li>
             </Link>
           </ul>
-          <button className="bg-[#605DEC] py-2 px-4 md:py-3 md:px-5 rounded-[5px] outline-none border-none text-base text-[#FAFAFA]">Sign up</button>
+          <div className="">
+          <button className="bg-[#605DEC] py-2 px-4 md:py-3 md:px-5 rounded-[5px] outline-none border-none text-base text-[#FAFAFA]" onClick={() => setSignin(!signin)}>Sign up</button>
+         { signin && ( 
+          <Signin signin={signin} setSignin={setSignin}/>
+          )}
+          </div>
         </div>
 
        {/* Mobile View */}
 
        <div className="md:hidden flex items-center space-x-2">
-       <button className="bg-[#605DEC] py-2 px-4 rounded-[5px] outline-none border-none text-base text-[#FAFAFA]">Sign up</button>
+        <div className="">
+       <button className="bg-[#605DEC] py-2 px-4 rounded-[5px] outline-none border-none text-base text-[#FAFAFA]" onClick={() => setSignin(!signin)}>Sign up</button>
+       { signin && ( 
+          <Signin signin={signin} setSignin={setSignin}/>
+          )}
+        </div>
        <div className="relative">
        {toggle ? (
           <MdOutlineClose src={close} alt="close" className="w-9 h-9 text-[#6E7491] cursor-pointer" onClick={() => setToggle(false)}/>
@@ -63,7 +75,7 @@ const Navbar = () => {
             <HiOutlineMenu className="w-9 h-9 text-[#6E7491] cursor-pointer" onClick={() => setToggle(true)}/>
           )}
         { toggle && (
-            <ul className="absolute w-32 h-fit bg-[#FFFFFF] shadow-xl top-14 right-1 text-[#7C8DB0] flex flex-col gap-2 items-end p-4 scaleUp">
+            <ul className="absolute w-32 z-10 h-fit bg-[#FFFFFF] shadow-xl top-14 right-1 text-[#7C8DB0] flex flex-col gap-2 items-end p-4 scaleUp">
                 <Link
               to="/"
               className={`text-base  hover:text-[#605DEC] transition-all duration-200 ${loactionPath("/") && "text-[#605DEC]"}`}

@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { Footer, Navbar } from './components'
-import { FlightExplore, Flights, Hotels, Packages } from './pages'
+import { FlightExplore, Flights, Hotels, Packages, PassengerInfo } from './pages'
 
 
 
@@ -15,6 +15,7 @@ const App = () => {
         <Route path='/hotels' element={<Hotels/>}/>
         <Route path='/packages' element={<Packages/>}/>
         <Route path='/explore' element={<FlightExplore/>}/>
+        <Route path='/passenger-info' element={<PassengerInfo/>}/>
        </Routes>
        <Footer/>
     </div>

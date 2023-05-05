@@ -186,7 +186,7 @@ const SelectDetails = () => {
                 Airlines
               </option>
               <option value="Japan">Japan</option>
-              <potion value="Hawai">Hawai</potion>
+              <option value="Hawai">Hawai</option>
               <option value="Dubai">Dubai</option>
             </select>
             <select

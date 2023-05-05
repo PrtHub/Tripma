@@ -52,7 +52,7 @@ const Navbar = () => {
             </Link>
           </ul>
           <div className="">
-          <button className="bg-[#605DEC] py-2 px-4 md:py-3 md:px-5 rounded-[5px] outline-none border-none text-base text-[#FAFAFA]" onClick={() => setSignin(!signin)}>Sign up</button>
+          <button className="bg-[#605DEC] py-2 px-4 md:py-3 md:px-5 rounded-[5px] border-2 border-[#605DEC] text-base text-[#FAFAFA] hover:text-[#605DEC] hover:bg-white hover:border-2 hover:border-[#605DEC] transition-all duration-200" onClick={() => setSignin(!signin)}>Sign up</button>
          { signin && ( 
           <Signin signin={signin} setSignin={setSignin}/>
           )}
@@ -63,7 +63,7 @@ const Navbar = () => {
 
        <div className="md:hidden flex items-center space-x-2">
         <div className="">
-       <button className="bg-[#605DEC] py-2 px-4 rounded-[5px] outline-none border-none text-base text-[#FAFAFA]" onClick={() => setSignin(!signin)}>Sign up</button>
+       <button className="bg-[#605DEC] py-2 px-4 rounded-[5px] border-2 border-[#605DEC] text-base text-[#FAFAFA] hover:text-[#605DEC] hover:bg-white hover:border-2 hover:border-[#605DEC] transition-all duration-200" onClick={() => setSignin(!signin)}>Sign up</button>
        { signin && ( 
           <Signin signin={signin} setSignin={setSignin}/>
           )}

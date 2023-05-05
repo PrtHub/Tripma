@@ -34,7 +34,7 @@ const SelectDetails = () => {
   return (
     <>
       <div className="w-full">
-        <div className="lg:w-[872px] w-full flex flex-col gap-5">
+        <div className="lg:w-[872px] w-full flex flex-col gap-10">
           <div className="flex w-full h-12 lg:flex-row items-center flex-col lg:shadowCard  relative ">
             <div className="flex w-full lg:w-[173.92px] h-full justify-start items-center border-[1px] border-[#CBD4E6] p-2 rounded-t-[4px] lg:rounded-l-[4px]">
               <img src={departure} alt="departure" />

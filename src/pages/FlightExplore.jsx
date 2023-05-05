@@ -8,7 +8,7 @@ const FlightExplore = () => {
         <div className="mt-10">
          <SelectDetails/>
         </div>   
-        <div className="mt-10">
+        <div className="mt-16">
           <FlightChoose/>
         </div>   
     </div>

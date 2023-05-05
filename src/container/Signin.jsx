@@ -5,7 +5,7 @@ import { MdOutlineClose } from "react-icons/md";
 const Signin = ({signin, setSignin}) => {
  
   return (
-    <div className="absolute top-36 right-0 left-0 m-auto z-20 bg-[#FFFFFF] shadowCard w-[310px] sm:w-[468px] md:w-[568px] rounded px-8 py-6 flex flex-col  gap-6">
+    <div className="absolute top-36 right-0 left-0 m-auto z-20 bg-[#FFFFFF] shadowCard w-[310px] sm:w-[468px] md:w-[568px] rounded px-8 py-6 flex flex-col  gap-6 scaleUp">
       <header className="flex flex-col justify-start">
         <div className="flex items-center justify-between">
           <h1 className="text-[#6E7491] text-[20px] sm:text-[24px] leading-5 sm:leading-8 font-bold ">

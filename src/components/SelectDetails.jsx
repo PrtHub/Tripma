@@ -35,8 +35,8 @@ const SelectDetails = () => {
     <>
       <div className="w-full">
         <div className="lg:w-[872px] w-full flex flex-col gap-5">
-          <div className="flex w-full h-12 lg:flex-row items-center flex-col  shadowCard relative ">
-            <div className="flex w-full lg:w-[173.92px] h-full justify-start items-center border-[1px] border-[#CBD4E6] p-2 lg:rounded-l-[4px]">
+          <div className="flex w-full h-12 lg:flex-row items-center flex-col lg:shadowCard  relative ">
+            <div className="flex w-full lg:w-[173.92px] h-full justify-start items-center border-[1px] border-[#CBD4E6] p-2 rounded-t-[4px] lg:rounded-l-[4px]">
               <img src={departure} alt="departure" />
               <input
                 type="text"
@@ -135,7 +135,7 @@ const SelectDetails = () => {
             </div>
 
             <div className="w-full lg:w-[96px] ">
-              <button className="w-full bg-[#605DEC] text-[#FAFAFA] text-lg leading-6 h-[48px] px-5   lg:rounded-r-[4px]">
+              <button className="w-full bg-[#605DEC] text-[#FAFAFA] text-lg leading-6 h-[48px] px-5   rounded-b-[4px] lg:rounded-r-[4px]">
                 Search
               </button>
             </div>

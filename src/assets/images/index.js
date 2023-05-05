@@ -31,8 +31,10 @@ import maldivs from './maldivs.png'
 import mongolia from './mongolia.png'
 import morocco from './morocco.png'
 import map from './Map.png'
+import Pricehistory from './Pricehistory.png'
 
 export {
+    Pricehistory,
     hero,
     map,
     morocco,

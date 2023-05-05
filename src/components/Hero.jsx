@@ -6,6 +6,7 @@ import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
 // import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   // const navigate = useNavigate();
@@ -128,11 +129,11 @@ const Hero = () => {
             )}
           </div>
 
-          <div className="w-full ">
+          <Link to='/explore' className="w-full ">
             <button className="w-full bg-[#605DEC] text-[#FAFAFA] text-lg leading-6 h-[45px] lg:h-[65px] px-5   lg:rounded-r-[4px]">
               Search
             </button>
-          </div>
+          </Link>
         </div>
       </header>
     </>

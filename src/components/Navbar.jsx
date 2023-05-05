@@ -70,9 +70,9 @@ const Navbar = () => {
         </div>
        <div className="relative">
        {toggle ? (
-          <MdOutlineClose src={close} alt="close" className="w-9 h-9 text-[#6E7491] cursor-pointer" onClick={() => setToggle(false)}/>
+          <MdOutlineClose src={close} alt="close" className="w-9 h-9 text-[#605DEC] cursor-pointer" onClick={() => setToggle(false)}/>
           ) : (
-            <HiOutlineMenu className="w-9 h-9 text-[#6E7491] cursor-pointer" onClick={() => setToggle(true)}/>
+            <HiOutlineMenu className="w-9 h-9 text-[#605DEC] cursor-pointer" onClick={() => setToggle(true)}/>
           )}
         { toggle && (
             <ul className="absolute w-32 z-10 h-fit bg-[#FFFFFF] shadow-xl top-14 right-1 text-[#7C8DB0] flex flex-col gap-2 items-end p-4 scaleUp">

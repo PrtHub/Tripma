@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import FlightDeals from "./FlightDeals";
 import Testimonials from "./Testimonials";
 import SelectDetails from "./SelectDetails";
+import FlightChoose from "./FlightChoose";
 
 
 export {
@@ -12,5 +13,6 @@ export {
     Hero,
     FlightDeals,
     SelectDetails,
-    Testimonials
+    Testimonials,
+    FlightChoose
 }

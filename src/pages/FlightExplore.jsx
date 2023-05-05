@@ -1,4 +1,4 @@
-import { SelectDetails } from "../components"
+import { FlightChoose, SelectDetails } from "../components"
 
 
 const FlightExplore = () => {
@@ -7,7 +7,10 @@ const FlightExplore = () => {
     <div className="px-8 w-full flex flex-col">
         <div className="mt-10">
          <SelectDetails/>
-        </div>      
+        </div>   
+        <div className="mt-10">
+          <FlightChoose/>
+        </div>   
     </div>
     </>
   )

@@ -30,9 +30,11 @@ import shangai from './shangai.png'
 import maldivs from './maldivs.png'
 import mongolia from './mongolia.png'
 import morocco from './morocco.png'
+import map from './Map.png'
 
 export {
     hero,
+    map,
     morocco,
     maldivs,
     mongolia,

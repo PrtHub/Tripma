@@ -34,7 +34,7 @@ const SelectDetails = () => {
   return (
     <>
       <div className="w-full">
-        <div className="lg:w-[872px] w-full flex flex-col gap-10">
+        <div className="lg:w-[872px] w-full flex flex-col gap-5">
           <div className="flex w-full h-12 lg:flex-row items-center flex-col  shadowCard relative ">
             <div className="flex w-full lg:w-[173.92px] h-full justify-start items-center border-[1px] border-[#CBD4E6] p-2 lg:rounded-l-[4px]">
               <img src={departure} alt="departure" />
@@ -143,7 +143,7 @@ const SelectDetails = () => {
 
           {/* Select section */}
 
-          <div className="flex flex-wrap items-center  justify-start gap-3 mt-44 lg:mt-1 ">
+          <div className="flex flex-wrap items-center  justify-start gap-3 mt-48 lg:mt-1 ">
             <select
               name="price"
               id="max-price"
@@ -164,9 +164,6 @@ const SelectDetails = () => {
               <option value="shops" className="">
                 Shops
               </option>
-              {/* <option value="$100-300$">$100-300$</option>
-            <option value="$300-600$">$300-600$</option>
-            <option value="$600-1000$">$600-1000$</option> */}
             </select>
             <select
               name="times"
@@ -189,7 +186,7 @@ const SelectDetails = () => {
                 Airlines
               </option>
               <option value="Japan">Japan</option>
-              <otion value="Hawai">Hawai</otion>
+              <potion value="Hawai">Hawai</potion>
               <option value="Dubai">Dubai</option>
             </select>
             <select
@@ -212,9 +209,6 @@ const SelectDetails = () => {
               <option value="max-price" className="">
                 more
               </option>
-              {/* <option value="$100-300$">$100-300$</option>
-            <option value="$300-600$">$300-600$</option>
-            <option value="$600-1000$">$600-1000$</option> */}
             </select>
           </div>
         </div>

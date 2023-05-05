@@ -64,3 +64,10 @@
    line-height: 24px;
 }
 
+.priceGridHead{
+  @apply w-[50px] sm:w-[65px] pt-2 h-full text-center border-r-[1px]  border-[#E9E8FC] text-[#52556F] font-bold text-xs;
+}
+
+.priceGridText{
+  @apply w-[50px] sm:w-[65px] h-full text-center border-r-[1px]  border-[#E9E8FC] p-2 text-[#6E7491] font-normal text-sm;
+}

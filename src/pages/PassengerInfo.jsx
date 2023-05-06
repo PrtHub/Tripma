@@ -35,6 +35,19 @@ const PassengerInfo = () => {
 
   }
 
+   const[numOfBag, setNumOfBag] = useState({
+    numbag: 1
+   });
+    
+  const handleBagNumber = (name, oparetion) => {
+    setNumOfBag((prev) => {
+      return {
+        ...prev,
+        [name]: oparetion === "i" ? numOfBag[name] + 1 : numOfBag[name] - 1,
+      };
+    });
+  };
+
   return (
     <>
       <div className="px-8 w-full h-full flex lg:flex-row flex-col justify-between items-start mt-20 gap-10">
@@ -184,15 +197,15 @@ const PassengerInfo = () => {
                 Checked bags
               </p>
               <div className=" flex items-center gap-4">
-                <span className="text-[#605DEC] text-3xl font-semibold cursor-pointer">
+                <button className="text-[#605DEC] text-3xl font-semibold cursor-pointer disabled:cursor-not-allowed" onClick={() => handleBagNumber('numbag', 'd')} disabled={numOfBag.numbag <= 0}>
                   -
-                </span>
+                </button>
                 <span className="text-[#6E7491] text-base font-semibold">
-                  1
+                  {numOfBag.numbag}
                 </span>
-                <span className="text-[#605DEC] text-xl font-semibold cursor-pointer ">
+                <button className="text-[#605DEC] text-xl font-semibold cursor-pointer " onClick={() => handleBagNumber('numbag', 'i')}>
                   +
-                </span>
+                </button>
               </div>
             </div>
           </div>

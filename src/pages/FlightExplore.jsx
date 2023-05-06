@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { FlightChoose, SelectDetails } from "../components";
-import { PlacesCard } from "../container";
+import { FlightDealsCard, PlacesCard } from "../container";
 import { right } from "../assets/icons";
-import { bed, holes, maldivs, mongolia, morocco, wall } from "../assets/images";
+import { bed, holes, kenya, maldivs, mongolia, morocco, seoul, shangai, sydney, temple, wall } from "../assets/images";
 
 const FlightExplore = () => {
   return (
@@ -46,8 +46,44 @@ const FlightExplore = () => {
             />
           </div>
         </div>
-        
-        
+        <div className="mt-20 flex flex-col gap-7">
+        <div className="flex items-center justify-between">
+          <p className="text-[#6E7491] font-medium md:font-bold sm:text-base md:text-[24px] md:leading-8">
+          People in <span className="text-[#605DEC]"> San Francisco </span>  also <br className=" blocksm:hidden"/> searched for
+          </p>
+          <Link
+            to="/packages"
+            className="flex items-start justify-center gap-1"
+          >
+            <p className="text-[#A1B0CC] text-sm md:text-lg">All</p>
+            <img src={right} alt="arrow" className="w-5 h-5 md:w-6 md:h-6" />
+          </Link>
+        </div>
+        <div className="flex gap-16 flex-wrap items-start ">
+          <FlightDealsCard
+            image={shangai}
+            title="Shanghai,"
+            name="China"
+            price="$598"
+            des=" China’s most international city"
+          />
+          <FlightDealsCard
+            image={kenya}
+            title="Nairobi, "
+            name="Kenya"
+            price="$1,248"
+            des="Dubbed the Safari Capital of the World"
+          />
+          <FlightDealsCard
+            image={seoul}
+            title="Seoul, "
+            name="South Korea"
+            price="$589"
+            des="This modern city is a traveler’s dream"
+          />
+        </div>
+        </div>
+
       </div>
     </>
   );

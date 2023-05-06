@@ -8,7 +8,6 @@ import hotelpool from './hotelpool.png'
 import temple from './temple.png'
 import ledis from './ledis.png'
 import nature from './nature.png'
-import nightout from './nightout.png'
 import office from './office.png'
 import old from './old.png'
 import resort from './resort.png'
@@ -34,9 +33,13 @@ import map from './Map.png'
 import Pricehistory from './Pricehistory.png'
 import holes from './holes.png'
 import wall from './wall.png'
+import seoul from './seoul.png'
+import kenya from './kenya.png'
 
 export {
     Pricehistory,
+    seoul,
+    kenya,
     holes,
     wall,
     hero,
@@ -63,7 +66,6 @@ export {
     temple,
     ledis,
     nature,
-    nightout,
     office,
     old,
     resort,

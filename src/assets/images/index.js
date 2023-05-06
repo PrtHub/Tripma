@@ -35,9 +35,11 @@ import holes from './holes.png'
 import wall from './wall.png'
 import seoul from './seoul.png'
 import kenya from './kenya.png'
+import bag from './bag.png'
 
 export {
     Pricehistory,
+    bag,
     seoul,
     kenya,
     holes,

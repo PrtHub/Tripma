@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 
 const PlacesCard = ({ image, title, name, desc }) => {

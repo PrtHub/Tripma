@@ -32,9 +32,13 @@ import mongolia from './mongolia.png'
 import morocco from './morocco.png'
 import map from './Map.png'
 import Pricehistory from './Pricehistory.png'
+import holes from './holes.png'
+import wall from './wall.png'
 
 export {
     Pricehistory,
+    holes,
+    wall,
     hero,
     map,
     morocco,

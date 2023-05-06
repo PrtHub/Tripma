@@ -1,8 +1,40 @@
 import { Link } from "react-router-dom";
 import { hawaiian } from "../assets/logo";
 import { bag } from "../assets/images";
+import { useState } from "react";
 
 const PassengerInfo = () => {
+
+  const [sameAsPassenger, setSameAsPassenger] = useState(false);
+
+  const[firstName, setFirstName] = useState('');
+  const[lastName, setLastName] = useState('');
+  const[phoneNumber, setPhoneNumber] = useState('');
+  const[email, setEmail] = useState('');
+
+  const [emergencyFirstName, setEmergencyFirstName] = useState('');
+  const [emergencyLastName, setEmergencyLastName] = useState('');
+  const [emergencyEmail, setEmergencyEmail] = useState('');
+  const [emergencyPhoneNumber, setEmergencyPhoneNumber] = useState('');
+  
+  const handleCheckboxChange = (e) => {
+    e.preventDefault();
+    setSameAsPassenger(e.target.checked);
+
+    if(e.target.checked) {
+      setEmergencyFirstName(firstName);
+      setEmergencyLastName(lastName);
+      setEmergencyPhoneNumber(phoneNumber);
+      setEmergencyEmail(email);
+    } else {
+      setEmergencyFirstName('');
+      setEmergencyLastName('');
+      setEmergencyEmail('');
+      setEmergencyPhoneNumber('');
+    }
+
+  }
+
   return (
     <>
       <div className="px-8 w-full h-full flex lg:flex-row flex-col justify-between items-start mt-20 gap-10">
@@ -26,6 +58,8 @@ const PassengerInfo = () => {
                 type="text"
                 placeholder="First Name*"
                 className=" w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
               />
               <input
                 type="text"
@@ -36,6 +70,8 @@ const PassengerInfo = () => {
                 type="text"
                 placeholder="Last Name*"
                 className=" w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
               />
             </form>
             <form className="flex flex-col w-full md:flex-row items-center justify-start gap-4">
@@ -55,11 +91,15 @@ const PassengerInfo = () => {
                 type="email"
                 placeholder="Email Adress*"
                 className="w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="text"
                 placeholder="Phone Number*"
                 className="w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </form>
             <form className="flex flex-col w-full md:flex-row items-center justify-start gap-4">
@@ -80,7 +120,8 @@ const PassengerInfo = () => {
               Emergency contact information
             </h2>
             <div className="flex items-center justify-start gap-2 mt-2">
-              <input type="checkbox" name="checkbox" id="checkbox" />
+              <input type="checkbox" name="checkbox" id="checkbox"  checked={sameAsPassenger}
+            onChange={handleCheckboxChange} />
               <label htmlFor="checkbox" className="text-[#6E7491] font-normal">
                 Same as Passenger 1
               </label>
@@ -90,11 +131,15 @@ const PassengerInfo = () => {
                 type="text"
                 placeholder="First Name*"
                 className=" w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
+                 value={ sameAsPassenger ? firstName : emergencyFirstName}
+                 onChange={(e) => setEmergencyFirstName(e.target.value)}
               />
               <input
                 type="text"
-                placeholder="Middle Name*"
+                placeholder="Last Name*"
                 className="w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
+                value={ sameAsPassenger ? lastName : emergencyLastName}
+                onChange={(e) => setEmergencyLastName(e.target.value)}
               />
             </form>
             <form className="flex flex-col w-full md:flex-row items-center justify-start gap-4 mt-2">
@@ -102,11 +147,15 @@ const PassengerInfo = () => {
                 type="email"
                 placeholder="Email Adress*"
                 className="w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
+                value={ sameAsPassenger ? email : emergencyEmail }
+                onChange={(e) => setEmergencyEmail(e.target.value)}
               />
               <input
                 type="text"
                 placeholder="Phone Number*"
                 className="w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
+                value={ sameAsPassenger ? phoneNumber : emergencyPhoneNumber }
+                onChange={(e) => setEmergencyPhoneNumber(e.target.value)}
               />
             </form>
           </div>

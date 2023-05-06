@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FlightChoose, SelectDetails } from "../components";
 import { FlightDealsCard, PlacesCard } from "../container";
 import { right } from "../assets/icons";
-import { bed, holes, kenya, maldivs, mongolia, morocco, seoul, shangai, sydney, temple, wall } from "../assets/images";
+import { bed, holes, kenya, seoul, shangai, wall } from "../assets/images";
 
 const FlightExplore = () => {
   return (

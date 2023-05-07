@@ -96,7 +96,7 @@ const ConfirmShop = () => {
           </div>
         </div>
 
-        <Link to='/hotels' className="w-full h-full flex items-center justify-center">
+        <Link to='/packages' className="w-full h-full flex items-center justify-center">
             <button className="py-2 px-4 border-[1px] border-[#605DEC] text-[#605DEC] bg-white rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">Shop all hotels</button>
         </Link>
       </div>
@@ -152,7 +152,7 @@ const ConfirmShop = () => {
             </p>
           </div>
         </div>
-        <Link to='/hotels' className="w-full h-full flex items-center justify-center">
+        <Link to='/packages' className="w-full h-full flex items-center justify-center">
             <button className="py-2 px-4 border-[1px] border-[#605DEC] text-[#605DEC] bg-white rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">View all experiences</button>
         </Link>
       </div>

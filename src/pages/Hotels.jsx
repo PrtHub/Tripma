@@ -2,7 +2,11 @@
 
 const Hotels = () => {
   return (
-    <div>Hotels</div>
+    <>
+    <div className="px-8">
+      
+    </div>
+    </>
   )
 }
 

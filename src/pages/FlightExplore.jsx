@@ -49,7 +49,7 @@ const FlightExplore = () => {
         <div className="mt-20 flex flex-col gap-7">
         <div className="flex items-center justify-between">
           <p className="text-[#6E7491] font-medium md:font-bold sm:text-base md:text-[24px] md:leading-8">
-          People in <span className="text-[#605DEC]"> San Francisco </span>  also <br className=" blocksm:hidden"/> searched for
+          People in <span className="text-[#605DEC]"> San Francisco </span>  also <br className=" block sm:hidden"/> searched for
           </p>
           <Link
             to="/packages"
@@ -73,6 +73,13 @@ const FlightExplore = () => {
             name="Kenya"
             price="$1,248"
             des="Dubbed the Safari Capital of the World"
+          />
+          <FlightDealsCard
+            image={seoul}
+            title="Seoul, "
+            name="South Korea"
+            price="$589"
+            des="This modern city is a traveler’s dream"
           />
           <FlightDealsCard
             image={seoul}

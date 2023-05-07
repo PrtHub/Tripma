@@ -13,10 +13,12 @@ import instagram from './instagram.png'
 import twitter from './twitter.png'
 import appStore from './appStore.png'
 import googlePlay from './googlePlay.png'
+import creditCard from './creditCard.png'
 
 
 
 export {
+    creditCard,
     appStore,
     googlePlay,
     menu,

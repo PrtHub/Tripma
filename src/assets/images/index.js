@@ -44,9 +44,22 @@ import planebody from  './planebody.png'
 import whitespace from './whitespace.png'
 import business from './BusinessSeats.png'
 import economy from './EconomySeats.png'
+import map1 from './Map1.png'
+import Ryoka from './Ryoka.png'
+import Bessho from './Bessho.png'
+import HotelFlag from './HotelFlag.png'
+import fiveHole from './fiveHole.png'
+import kimono from './kimono.png'
+import teamLab from './teamLab.png'
 
 export {
     whitespace,
+    kimono,
+    teamLab,
+    Bessho,
+    HotelFlag,
+    fiveHole,
+    Ryoka,
     business,
     economy,
     Pricehistory,
@@ -62,6 +75,7 @@ export {
     wall,
     hero,
     map,
+    map1,
     morocco,
     maldivs,
     mongolia,

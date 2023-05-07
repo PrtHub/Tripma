@@ -5,6 +5,7 @@ import FlightDeals from "./FlightDeals";
 import Testimonials from "./Testimonials";
 import SelectDetails from "./SelectDetails";
 import FlightChoose from "./FlightChoose";
+import ConfirmShop from "./ConfirmShop";
 
 
 export {
@@ -14,5 +15,6 @@ export {
     FlightDeals,
     SelectDetails,
     Testimonials,
-    FlightChoose
+    FlightChoose,
+    ConfirmShop
 }

@@ -13,26 +13,29 @@ import { PriceDetails } from "../container";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-
 const Payment = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const[name, setName] = useState('')
-  const[number, setNumber] = useState('')
-  const[date, setDate] = useState('')
-  const[ccv, setCcv] = useState('')
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [date, setDate] = useState("");
+  const [ccv, setCcv] = useState("");
 
   const submitInputs = (e) => {
-     e.preventDefault();
+    e.preventDefault();
 
-     if (name.trim() !== '' && number.trim() !== '' && ccv.trim() !== '' && date.trim() !== '') {
-        toast.success("Payment sent successfully")
-        navigate('/confirm')
-      } else {
-       toast.warning("Please fill the card details")
-      }
-  }
-
+    if (
+      name.trim() !== "" &&
+      number.trim() !== "" &&
+      ccv.trim() !== "" &&
+      date.trim() !== ""
+    ) {
+      toast.success("Payment sent successfully");
+      navigate("/confirm");
+    } else {
+      toast.warning("Please fill the card details");
+    }
+  };
 
   return (
     <>
@@ -150,35 +153,50 @@ const Payment = () => {
             </div>
           </div>
           <div className="w-full flex flex-col items-start justify-start gap-5">
-          <div className="flex flex-col items-start justify-start gap-3">
+            <div className="flex flex-col items-start justify-start gap-3">
               <h2 className="text-[#6E7491] text-xl">Cancellation policy</h2>
               <p className="text-[#7C8DB0] text-base font-normal">
-              This flight has a flexible cancellation policy. If you cancel or change your flight up to 30 days before the departure date, you are eligible for a free refund. All flights booked on Tripma are backed by our satisfaction guarantee, however cancellation policies vary by airline. See the <span className="text-[#605CDE]"> full cancellation policy</span> for this flight.
+                This flight has a flexible cancellation policy. If you cancel or
+                change your flight up to 30 days before the departure date, you
+                are eligible for a free refund. All flights booked on Tripma are
+                backed by our satisfaction guarantee, however cancellation
+                policies vary by airline. See the{" "}
+                <span className="text-[#605CDE]">
+                  {" "}
+                  full cancellation policy
+                </span>{" "}
+                for this flight.
               </p>
             </div>
           </div>
           <div className="flex items-center gap-5">
-            <Link to='/seat-selection'>
-            <button className="py-2 px-4 border-[1px] border-[#605DEC] text-[#605DEC] rounded hover:bg-[#605DEC] hover:text-white transition-all duration-200">
-             Back to seat select
-            </button>
-            </Link>
-            <Link >
-              <button className="hidden lg:block py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200" onClick={submitInputs}>
-               Confirm and pay
+            <Link to="/seat-selection">
+              <button className="py-2 px-4 border-[1px] border-[#605DEC] text-[#605DEC] rounded hover:bg-[#605DEC] hover:text-white transition-all duration-200">
+                Back to seat select
               </button>
             </Link>
-          </div>          
-        </div>
-
-        <div className="mt-10 flex flex-col gap-10 justify-end items-start lg:items-end">
-            <PriceDetails />
-            <Link className="mt-5">
-              <button className="py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200" onClick={submitInputs}>
-               Confirm and pay
+            <Link>
+              <button
+                className="hidden lg:block py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200"
+                onClick={submitInputs}
+              >
+                Confirm and pay
               </button>
             </Link>
           </div>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-10 justify-end items-start lg:items-end">
+          <PriceDetails />
+          <Link className="mt-5">
+            <button
+              className="py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200"
+              onClick={submitInputs}
+            >
+              Confirm and pay
+            </button>
+          </Link>
+        </div>
       </div>
     </>
   );

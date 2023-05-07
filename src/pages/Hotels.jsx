@@ -1,4 +1,4 @@
-import { bathroom, bed, holes, maldivs, mongolia, morocco, old, wall } from "../assets/images"
+import { bed, holes, maldivs, mongolia, morocco, wall } from "../assets/images"
 import { PlacesCard } from "../container"
 
 

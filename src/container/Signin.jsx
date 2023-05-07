@@ -1,9 +1,35 @@
+import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { MdOutlineClose } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 // eslint-disable-next-line react/prop-types
 const Signin = ({signin, setSignin}) => {
- 
+  const navigate = useNavigate();
+
+  const[email, setEmail] = useState('')
+  const[password, setPassword] = useState('')
+  const[check1, setCheck1] = useState(false)
+  const[check2, setCheck2] = useState(false)
+
+  const submitInputs = (e) => {
+     e.preventDefault();
+
+     if (email.trim() !== '' && password.trim() !== ''){
+      if (check1 && check2) {
+        toast.success("Sign in successful")
+        navigate('/') 
+        setSignin(false)
+      } else {
+       toast.warning("Please check the checkboxes")
+      }
+     } else {
+       toast.warning("Please fill the details")
+      }
+    
+  }
+
   return (
     <div className="absolute top-36 right-0 left-0 m-auto z-20 bg-[#FFFFFF] shadowCard w-[310px] sm:w-[468px] md:w-[568px] rounded px-8 py-6 flex flex-col  gap-6 scaleUp">
       <header className="flex flex-col justify-start">
@@ -25,11 +51,15 @@ const Signin = ({signin, setSignin}) => {
         <input
           type="email"
           placeholder="Email or Phone Number"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="outline-none border-[1px] border-[#A1B0CC] p-2 placeholder:text-[#7C8DB0] text-[#7C8DB0] rounded"
         />
         <input
           type="password"
           placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           className="outline-none border-[1px] border-[#A1B0CC] p-2 placeholder:text-[#7C8DB0] text-[#7C8DB0] rounded"
         />
       </form>
@@ -39,7 +69,9 @@ const Signin = ({signin, setSignin}) => {
             type="checkbox"
             name="checkbox"
             id="checkbox"
-            className="text-[#7C8DB0] outline-none "
+            checked={check1}
+            onChange={(e) => setCheck1(e.target.checked)}
+            className="text-[#7C8DB0] outline-none"
           />
           <label htmlFor="checkbox" className="text-[#7C8DB0] text-sm sm:text-base">
             I agree to the{" "}
@@ -51,6 +83,8 @@ const Signin = ({signin, setSignin}) => {
             type="checkbox"
             name="checkbox"
             id="checkbox"
+            checked={check2}
+            onChange={(e) => setCheck2(e.target.checked)}
             className="text-[#7C8DB0] outline-none "
           />
           <label htmlFor="checkbox" className="text-[#7C8DB0] text-sm sm:text-base">
@@ -61,7 +95,7 @@ const Signin = ({signin, setSignin}) => {
       <div className="w-full flex items-center justify-center">
         <button
           className="w-full bg-[#605DEC] text-[#FAFAFA] rounded py-3 outline-none border-none"
-          onClick={() => setSignin(false)}
+          onClick={submitInputs}
         >
           Create Account
         </button>

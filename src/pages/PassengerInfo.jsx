@@ -5,41 +5,39 @@ import { useState } from "react";
 import { PriceDetails } from "../container";
 
 const PassengerInfo = () => {
-
   const [sameAsPassenger, setSameAsPassenger] = useState(false);
 
-  const[firstName, setFirstName] = useState('');
-  const[lastName, setLastName] = useState('');
-  const[phoneNumber, setPhoneNumber] = useState('');
-  const[email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
 
-  const [emergencyFirstName, setEmergencyFirstName] = useState('');
-  const [emergencyLastName, setEmergencyLastName] = useState('');
-  const [emergencyEmail, setEmergencyEmail] = useState('');
-  const [emergencyPhoneNumber, setEmergencyPhoneNumber] = useState('');
-  
+  const [emergencyFirstName, setEmergencyFirstName] = useState("");
+  const [emergencyLastName, setEmergencyLastName] = useState("");
+  const [emergencyEmail, setEmergencyEmail] = useState("");
+  const [emergencyPhoneNumber, setEmergencyPhoneNumber] = useState("");
+
   const handleCheckboxChange = (e) => {
     e.preventDefault();
     setSameAsPassenger(e.target.checked);
 
-    if(e.target.checked) {
+    if (e.target.checked) {
       setEmergencyFirstName(firstName);
       setEmergencyLastName(lastName);
       setEmergencyPhoneNumber(phoneNumber);
       setEmergencyEmail(email);
     } else {
-      setEmergencyFirstName('');
-      setEmergencyLastName('');
-      setEmergencyEmail('');
-      setEmergencyPhoneNumber('');
+      setEmergencyFirstName("");
+      setEmergencyLastName("");
+      setEmergencyEmail("");
+      setEmergencyPhoneNumber("");
     }
+  };
 
-  }
+  const [numOfBag, setNumOfBag] = useState({
+    numbag: 1,
+  });
 
-   const[numOfBag, setNumOfBag] = useState({
-    numbag: 1
-   });
-    
   const handleBagNumber = (name, oparetion) => {
     setNumOfBag((prev) => {
       return {
@@ -134,8 +132,13 @@ const PassengerInfo = () => {
               Emergency contact information
             </h2>
             <div className="flex items-center justify-start gap-2 mt-2">
-              <input type="checkbox" name="checkbox" id="checkbox"  checked={sameAsPassenger}
-            onChange={handleCheckboxChange} />
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="checkbox"
+                checked={sameAsPassenger}
+                onChange={handleCheckboxChange}
+              />
               <label htmlFor="checkbox" className="text-[#6E7491] font-normal">
                 Same as Passenger 1
               </label>
@@ -145,14 +148,14 @@ const PassengerInfo = () => {
                 type="text"
                 placeholder="First Name*"
                 className=" w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
-                 value={ sameAsPassenger ? firstName : emergencyFirstName}
-                 onChange={(e) => setEmergencyFirstName(e.target.value)}
+                value={sameAsPassenger ? firstName : emergencyFirstName}
+                onChange={(e) => setEmergencyFirstName(e.target.value)}
               />
               <input
                 type="text"
                 placeholder="Last Name*"
                 className="w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
-                value={ sameAsPassenger ? lastName : emergencyLastName}
+                value={sameAsPassenger ? lastName : emergencyLastName}
                 onChange={(e) => setEmergencyLastName(e.target.value)}
               />
             </form>
@@ -161,14 +164,14 @@ const PassengerInfo = () => {
                 type="email"
                 placeholder="Email Adress*"
                 className="w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
-                value={ sameAsPassenger ? email : emergencyEmail }
+                value={sameAsPassenger ? email : emergencyEmail}
                 onChange={(e) => setEmergencyEmail(e.target.value)}
               />
               <input
                 type="text"
                 placeholder="Phone Number*"
                 className="w-full border-[1px] border-[#A1B0CC] outline-none px-2 py-3 text-[#7C8DB0] placeholder:text-[#7C8DB0] rounded"
-                value={ sameAsPassenger ? phoneNumber : emergencyPhoneNumber }
+                value={sameAsPassenger ? phoneNumber : emergencyPhoneNumber}
                 onChange={(e) => setEmergencyPhoneNumber(e.target.value)}
               />
             </form>
@@ -198,13 +201,20 @@ const PassengerInfo = () => {
                 Checked bags
               </p>
               <div className=" flex items-center gap-4">
-                <button className="text-[#605DEC] text-3xl font-semibold cursor-pointer disabled:cursor-not-allowed" onClick={() => handleBagNumber('numbag', 'd')} disabled={numOfBag.numbag <= 0}>
+                <button
+                  className="text-[#605DEC] text-3xl font-semibold cursor-pointer disabled:cursor-not-allowed"
+                  onClick={() => handleBagNumber("numbag", "d")}
+                  disabled={numOfBag.numbag <= 0}
+                >
                   -
                 </button>
                 <span className="text-[#6E7491] text-base font-semibold">
                   {numOfBag.numbag}
                 </span>
-                <button className="text-[#605DEC] text-xl font-semibold cursor-pointer " onClick={() => handleBagNumber('numbag', 'i')}>
+                <button
+                  className="text-[#605DEC] text-xl font-semibold cursor-pointer "
+                  onClick={() => handleBagNumber("numbag", "i")}
+                >
                   +
                 </button>
               </div>
@@ -214,28 +224,32 @@ const PassengerInfo = () => {
             <button className="py-2 px-4 border-[1px] border-[#605DEC] text-[#605DEC] rounded hover:bg-[#605DEC] hover:text-white transition-all duration-200">
               Save & close
             </button>
-            <Link to='/seat-selection'>
-            <button className="hidden lg:block py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">
-              Select seats
-            </button>
+            <Link to="/seat-selection">
+              <button className="hidden lg:block py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">
+                Select seats
+              </button>
             </Link>
           </div>
         </div>
 
-
-     <div className="w-full h-full sm:w-[400px] justify-between ">
-     <div className="mt-10 flex flex-col gap-10 justify-end items-start lg:items-end">
+        <div className="w-full h-full sm:w-[400px] justify-between ">
+          <div className="mt-10 flex flex-col gap-10 justify-end items-start lg:items-end">
             <PriceDetails />
-            <Link to='/seat-selection' className="mt-5">
-           <button className="py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">Select seats</button>
-        </Link>
+            <Link to="/seat-selection" className="mt-5">
+              <button className="py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">
+                Select seats
+              </button>
+            </Link>
           </div>
-      </div>
+        </div>
         <div className="flex justify-center sm:justify-center mt-10">
-          <img src={bag} alt="bag" className="w-80 h-[420px] md:w-full md:h-full object-contain"/>
+          <img
+            src={bag}
+            alt="bag"
+            className="w-80 h-[420px] md:w-full md:h-full object-contain"
+          />
         </div>
-        </div>
-   
+      </div>
     </>
   );
 };

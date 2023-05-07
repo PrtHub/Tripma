@@ -213,9 +213,11 @@ const PassengerInfo = () => {
             <button className="py-2 px-4 border-[1px] border-[#605DEC] text-[#605DEC] rounded hover:bg-[#605DEC] hover:text-white transition-all duration-200">
               Save & close
             </button>
+            <Link to='/seat-selection'>
             <button className="hidden lg:block py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">
               Select seats
             </button>
+            </Link>
           </div>
         </div>
 
@@ -294,7 +296,7 @@ const PassengerInfo = () => {
               <p>$624</p>
             </div>
           </div>
-          <Link to="/passenger-info" className="mt-5">
+          <Link to="/seat-selection" className="mt-5">
             <button className="py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">
               Select seats
             </button>

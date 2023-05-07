@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { hawaiian } from "../assets/logo";
 import { bag } from "../assets/images";
 import { useState } from "react";
 import { PriceDetails } from "../container";
@@ -232,7 +231,7 @@ const PassengerInfo = () => {
           </div>
         </div>
 
-        <div className="w-full h-full sm:w-[400px] justify-between ">
+        <div className="w-full h-full sm:w-[400px] justify-between flex-col">
           <div className="mt-10 flex flex-col gap-10 justify-end items-start lg:items-end">
             <PriceDetails />
             <Link to="/seat-selection" className="mt-5">
@@ -240,14 +239,14 @@ const PassengerInfo = () => {
                 Select seats
               </button>
             </Link>
-          </div>
-        </div>
+          </div>     
         <div className="flex justify-center sm:justify-center mt-10">
           <img
             src={bag}
             alt="bag"
             className="w-80 h-[420px] md:w-full md:h-full object-contain"
           />
+        </div>
         </div>
       </div>
     </>

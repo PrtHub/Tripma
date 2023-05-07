@@ -8,10 +8,32 @@ import { FcGoogle } from "react-icons/fc";
 import { SiBitcoin } from "react-icons/si";
 import { IoLogoApple } from "react-icons/io";
 import { iconfacebook } from "../assets/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PriceDetails } from "../container";
+import { useState } from "react";
+import { toast } from "react-toastify";
+
 
 const Payment = () => {
+   const navigate = useNavigate();
+
+  const[name, setName] = useState('')
+  const[number, setNumber] = useState('')
+  const[date, setDate] = useState('')
+  const[ccv, setCcv] = useState('')
+
+  const submitInputs = (e) => {
+     e.preventDefault();
+
+     if (name.trim() !== '' && number.trim() !== '' && ccv.trim() !== '' && date.trim() !== '') {
+        toast.success("Payment sent successfully")
+        navigate('/confirm')
+      } else {
+       toast.warning("Please fill the card details")
+      }
+  }
+
+
   return (
     <>
       <div className="px-8 w-full h-full flex lg:flex-row flex-col justify-between items-start mt-20 gap-10">
@@ -51,22 +73,30 @@ const Payment = () => {
               <input
                 type="text"
                 placeholder="Name on card"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full sm:w-[480px] h-full outline-none border-[1px] border-[#A1B0CC] placeholder:text-[#7C8DB0] text-[#7C8DB0] px-2 py-3 text-base rounded"
               />
               <input
                 type="text"
                 placeholder="Card Number"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
                 className="w-full sm:w-[480px] h-full outline-none border-[1px] border-[#A1B0CC] placeholder:text-[#7C8DB0] text-[#7C8DB0] px-2 py-3 text-base rounded"
               />
               <div className="flex items-center justify-center gap-5">
                 <input
                   type="text"
                   placeholder="Expiration date [MM/YY]"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
                   className="w-full sm:w-[240px] h-full outline-none border-[1px] border-[#A1B0CC] placeholder:text-[#7C8DB0] text-[#7C8DB0] px-2 py-3 text-base rounded"
                 />
                 <input
                   type="text"
                   placeholder="CCV"
+                  value={ccv}
+                  onChange={(e) => setCcv(e.target.value)}
                   className="w-full sm:w-[216px] h-full outline-none border-[1px] border-[#A1B0CC] placeholder:text-[#7C8DB0] text-[#7C8DB0] px-2 py-3 text-base rounded"
                 />
               </div>
@@ -133,8 +163,8 @@ const Payment = () => {
              Back to seat select
             </button>
             </Link>
-            <Link to="/confirm">
-              <button className="hidden lg:block py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">
+            <Link >
+              <button className="hidden lg:block py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200" onClick={submitInputs}>
                Confirm and pay
               </button>
             </Link>
@@ -143,9 +173,9 @@ const Payment = () => {
 
         <div className="mt-10 flex flex-col gap-10 justify-end items-start lg:items-end">
             <PriceDetails />
-            <Link to="/confirm" className="mt-5">
-              <button className="py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200">
-              Confirm and pay
+            <Link className="mt-5">
+              <button className="py-2 px-4 border-[1px] border-[#7C8DB0] text-[#7C8DB0] bg-[#CBD4E6] rounded hover:bg-[#605DEC] hover:text-white hover:border-[#605DEC] transition-all duration-200" onClick={submitInputs}>
+               Confirm and pay
               </button>
             </Link>
           </div>

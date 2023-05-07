@@ -21,7 +21,7 @@ const Confirm = () => {
           )}
 
           <div className=" w-full flex flex-col items-start justify-start gap-2">
-            <h1 className="text-[#605DEC] text-xl sm:text-2xl font-bold">Bon voyage, Sophia!</h1>
+            <h1 className="titleh1">Bon voyage, Sophia!</h1>
             <p className="text-[#6E7491] text-base sm:text-lg font-semibold">Confirmation number: #381029404387</p>
             <p className="text-[#7C8DB0] text-sm sm:text-base font-medium">Thank you for booking your travel with Tripma! Below is a summary of your trip to Narita airport in Tokyo, Japan. We’ve sent a copy of your booking confirmation to your email address. You can also find this page again in <span className="text-[#605DEC]"> My trips.</span></p>
           </div>

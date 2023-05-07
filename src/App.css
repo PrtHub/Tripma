@@ -1,77 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-
 .scaleUp {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #9c53ff 0.89%,
+    #9c53ff 17.23%,
+    #007dff 42.04%,
+    #9c53ff 55.12%,
+    #9c53ff 60.54%,
+    #007dff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 
-  .text-gradient {
-    background: radial-gradient(
-      64.18% 64.18% at 71.16% 35.69%,
-      #9C53FF 0.89%,
-      #9C53FF 17.23%,
-      #007DFF 42.04%,
-      #9C53FF 55.12%,
-      #9C53FF 60.54%,
-      #007DFF 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  }
-
-.shadowCard{
-  box-shadow : 0px 2px 4px rgba(7, 4, 146, 0.1), 0px 24px 60px rgba(6, 47, 125, 0.05), 0px 12px 24px rgba(27, 59, 119, 0.05);
-
+.shadowCard {
+  box-shadow: 0px 2px 4px rgba(7, 4, 146, 0.1),
+    0px 24px 60px rgba(6, 47, 125, 0.05), 0px 12px 24px rgba(27, 59, 119, 0.05);
 }
 .dealsShadow {
-  box-shadow: 0px 2px 4px rgba(28, 5, 77, 0.1), 0px 12px 32px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 4px rgba(28, 5, 77, 0.1),
+    0px 12px 32px rgba(0, 0, 0, 0.05);
 }
 
-.footerLi{
-   color:#6E7491;
-   font-weight: 400;  
-   font-size: 16px;
-   line-height: 24px;
+.footerLi {
+  @apply text-[#6E7491] font-normal text-base;
 }
 
-.priceGridHead{
+.priceGridHead {
   @apply w-[50px] sm:w-[65px] pt-2 h-full text-center border-r-[1px]  border-[#E9E8FC] text-[#52556F] font-bold text-xs;
 }
 
-.priceGridText{
+.priceGridText {
   @apply w-[50px] sm:w-[65px] h-full text-center border-r-[1px]  border-[#E9E8FC] p-2 text-[#6E7491] font-normal text-sm;
 }
 
-.paymentoptions{
-  @apply w-full h-full hidden sm:flex items-center justify-center text-[#605DEC] gap-1 hover:bg-[#605DEC] hover:text-[#FAFAFA] focus:bg-[#605DEC] focus:text-[#FAFAFA] transition-all duration-200 
+.paymentoptions {
+  @apply w-full h-full hidden sm:flex items-center justify-center text-[#605DEC] gap-1 hover:bg-[#605DEC] hover:text-[#FAFAFA] focus:bg-[#605DEC] focus:text-[#FAFAFA] transition-all duration-200;
+}
+
+.titleh1 {
+  @apply text-[#605DEC] text-xl sm:text-2xl font-bold;
 }

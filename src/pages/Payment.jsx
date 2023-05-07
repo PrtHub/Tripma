@@ -42,7 +42,7 @@ const Payment = () => {
       <div className="px-8 w-full h-full flex lg:flex-row flex-col justify-between items-start mt-20 gap-10">
         <div className="w-full lg:w-[686px] flex flex-col items-start gap-12">
           <div className="flex flex-col items-start gap-2 w-full">
-            <h1 className="text-[#605DEC] text-xl font-bold">Payment method</h1>
+            <h1 className="titleh1">Payment method</h1>
             <p className="text-[#7C8DB0] text-base font-normal">
               Select a payment method below. Tripma processes your payment
               securely with end-to-end encryption.

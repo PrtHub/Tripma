@@ -9,7 +9,7 @@ const Places = () => {
       <div className="px-8 flex flex-col gap-7">
         <div className="flex items-center justify-between">
           <p className="text-[#6E7491] font-medium md:font-bold sm:text-base md:text-[24px] md:leading-8">
-            Explore unique{" "}
+            Explore unique
             <span className="text-[#54cdb7]"> places to stay</span>
           </p>
           <Link to="/hotels" className="flex items-start justify-center gap-1">

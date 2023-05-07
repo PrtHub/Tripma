@@ -4,6 +4,7 @@ import Packages from "./Packages";
 import FlightExplore from "./FlightExplore";
 import PassengerInfo from "./PassengerInfo";
 import SeatSelect from "./SeatSelect";
+import Payment from "./Payment";
 
 export {
     Flights,
@@ -11,5 +12,6 @@ export {
     Packages,
     FlightExplore,
     PassengerInfo,
-    SeatSelect
+    SeatSelect,
+    Payment
 }

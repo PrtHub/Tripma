@@ -9,6 +9,7 @@ import {
   united,
 } from "../assets/logo";
 import { FlightCard, PriceDetails, PriceGraph } from "../container";
+import { Link } from "react-router-dom";
 
 const FlightChoose = () => {
   const [priceShown, setPriceShow] = useState(true);
@@ -122,8 +123,11 @@ const FlightChoose = () => {
         )}
 
         {!priceShown && (
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col gap-10 justify-end items-start lg:items-end">
             <PriceDetails />
+            <Link to='/passenger-info' className="mt-5">
+           <button className="text-[#605DEC] border-2 border-[#605DEC] py-2 px-3 rounded hover:bg-[#605DEC] hover:text-white transition-all duration-200">Save & Close</button>
+        </Link>
           </div>
         )}
       </div>

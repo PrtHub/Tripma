@@ -36,9 +36,25 @@ import wall from './wall.png'
 import seoul from './seoul.png'
 import kenya from './kenya.png'
 import bag from './bag.png'
+import plane from  './Plane.png'
+import plane1 from  './Plane1.png'
+import plane2 from  './Plane2.png'
+import plane3 from  './Plane3.png'
+import planebody from  './planebody.png'
+import whitespace from './whitespace.png'
+import business from './BusinessSeats.png'
+import economy from './EconomySeats.png'
 
 export {
+    whitespace,
+    business,
+    economy,
     Pricehistory,
+    planebody,
+    plane,
+    plane1,
+    plane2,
+    plane3,
     bag,
     seoul,
     kenya,

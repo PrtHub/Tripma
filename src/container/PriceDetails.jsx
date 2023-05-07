@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+
 import { hawaiian } from "../assets/logo"
 
 const PriceDetails = () => {
@@ -49,9 +49,6 @@ const PriceDetails = () => {
             <p>$624</p>
            </div>
         </div>
-        <Link to='/passenger-info' className="mt-5">
-           <button className="text-[#605DEC] border-2 border-[#605DEC] py-2 px-3 rounded hover:bg-[#605DEC] hover:text-white transition-all duration-200">Save & Close</button>
-        </Link>
     </div>
     </>
   )

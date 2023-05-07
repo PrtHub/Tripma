@@ -71,3 +71,7 @@
 .priceGridText{
   @apply w-[50px] sm:w-[65px] h-full text-center border-r-[1px]  border-[#E9E8FC] p-2 text-[#6E7491] font-normal text-sm;
 }
+
+.paymentoptions{
+  @apply w-full h-full hidden sm:flex items-center justify-center text-[#605DEC] gap-1 hover:bg-[#605DEC] hover:text-[#FAFAFA] focus:bg-[#605DEC] focus:text-[#FAFAFA] transition-all duration-200 
+}

@@ -81,13 +81,7 @@ const FlightExplore = () => {
             price="$589"
             des="This modern city is a traveler’s dream"
           />
-          <FlightDealsCard
-            image={seoul}
-            title="Seoul, "
-            name="South Korea"
-            price="$589"
-            des="This modern city is a traveler’s dream"
-          />
+          
         </div>
         </div>
 

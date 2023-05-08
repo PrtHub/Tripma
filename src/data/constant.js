@@ -1,1 +1,1 @@
-export const suggestions = ['Hawai', 'Japan', 'India', 'US', 'UAE', 'Hongkong', 'Singapore','Tokyo', 'San Francisco', 'New York', 'Mumbai','Sydney', 'Toronto'];
+export const suggestions = ['LAX', 'JFK', 'ORD', 'DXB', 'LHR', 'SFO', 'NRT','CDG', 'AMS', 'SIN', 'PEK','SYD', 'HND', 'FRA', 'YYZ', 'ATL', 'ICN'];

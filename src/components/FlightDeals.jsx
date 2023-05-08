@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { right } from "../assets/icons";
 import { msunrise, shangai, sunrise, sydney, temple } from "../assets/images";
 import FlightDealsCard from "../container/FlightDealsCard";
 
 const FlightDeals = () => {
+
+  const navigate = useNavigate()
+
+  const handleSeeAllClick = (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    navigate('/packages')
+    
+  };
+
   return (
     <>
       <div className="px-8 flex flex-col gap-7">
@@ -12,13 +22,13 @@ const FlightDeals = () => {
             Find your next adventure <br className=" block sm:hidden " /> with
             these <span className="text-[#605DEC]">flight deals</span>
           </p>
-          <Link
-            to="/packages"
-            className="flex items-start justify-center gap-1"
+          <div
+            className="flex items-start justify-center gap-1 cursor-pointer"
+            onClick={handleSeeAllClick}
           >
-            <p className="text-[#A1B0CC] text-sm md:text-lg">All</p>
+            <p className="text-[#A1B0CC] text-sm md:text-lg" >All</p>
             <img src={right} alt="arrow" className="w-5 h-5 md:w-6 md:h-6" />
-          </Link>
+          </div>
         </div>
         <div className="flex gap-16 flex-wrap items-start ">
           <FlightDealsCard

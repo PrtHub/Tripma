@@ -1,9 +1,18 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { right } from "../assets/icons";
 import PlacesCard from "../container/PlacesCard";
 import { maldivs, mongolia, morocco } from "../assets/images";
 
 const Places = () => {
+
+  const navigate = useNavigate()
+
+  const handleSeeAllClick = (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    navigate('/hotels')
+    
+  };
   return (
     <>
       <div className="px-8 flex flex-col gap-7">
@@ -12,10 +21,10 @@ const Places = () => {
             Explore unique
             <span className="text-[#54cdb7]"> places to stay</span>
           </p>
-          <Link to="/hotels" className="flex items-start justify-center gap-1">
+          <div className="flex items-start justify-center gap-1 cursor-pointer" onClick={handleSeeAllClick}>
             <p className="text-[#A1B0CC] text-sm md:text-lg">All</p>
             <img src={right} alt="arrow" className="w-5 h-5 md:w-6 md:h-6" />
-          </Link>
+          </div>
         </div>
         <div className="flex gap-16 flex-wrap items-start ">
           <PlacesCard

@@ -41,7 +41,7 @@ const SelectDetails = () => {
               <input
                 type="text"
                 placeholder="SFO"
-                className="outline-none border-none ml-2 placeholder:text-[#7C8DB0] placeholder:text-sm placeholder:leading-6"
+                className="outline-none cursor-not-allowed border-none ml-2 placeholder:text-[#7C8DB0] placeholder:text-sm placeholder:leading-6"
               />
             </div>
 
@@ -50,7 +50,7 @@ const SelectDetails = () => {
               <input
                 type="text"
                 placeholder="NRT"
-                className="outline-none border-none ml-2 placeholder:text-[#7C8DB0] placeholder:text-sm placeholder:leading-6"
+                className="outline-none cursor-not-allowed border-none ml-2 placeholder:text-[#7C8DB0] placeholder:text-sm placeholder:leading-6"
               />
             </div>
 
